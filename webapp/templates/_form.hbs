@@ -1,0 +1,21 @@
+{% extends "layouts/_layout.hbs" %}
+
+{% block _footer %}
+{% include "partials/_footer.hbs" %}
+{% endblock _footer %}
+
+{% block _navi %}
+{% include "partials/_navi.hbs" %}
+{% endblock _navi %}
+
+{% block _sidemenu %}
+{% include "partials/_sidemenu.hbs" %}
+{% endblock _sidemenu %}
+
+{% block body %}
+{% load crispy_forms_tags %}
+{% csrf_token %}
+{% crispy form %}
+{% endblock body %}
+
+

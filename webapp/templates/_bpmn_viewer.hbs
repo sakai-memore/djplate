@@ -1,0 +1,14 @@
+{% extends "layouts/_layout_window.hbs" %}
+
+{% block _footer %}
+{% include "partials/_footer.hbs" %}
+{% endblock _footer %}
+
+{% block body %}
+{% include "bpmn/viewer/viewer.hbs" %}
+<script>
+{% include "bpmn/viewer/viewer.js" %}
+</script>
+{% endblock body %}
+
+

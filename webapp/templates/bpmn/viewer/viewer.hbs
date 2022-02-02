@@ -1,0 +1,29 @@
+{% load static %}
+
+<!-- styles -->
+<style>
+</style>
+
+<!-- insert body content -->
+<!-- <template> -->
+    <div class="container-fluid">
+      <!-- my content -->
+      <div class="row bg-light">
+        <div class="col-2">
+          <p><h5>ID: {{id}}</h5></p>
+        </div>
+        <div class="col-sm">
+          <p><h5>File Name: <span style="color:blue">{{file_name}}</span></h5></p>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div id="js-canvas" style="height:80vh"></div>
+        <!-- <div id="js-canvas"></div> -->
+      </div>
+      <!-- my content -->
+    </div>
+<!-- </template> -->
+
+
+<!-- scripts -->
+<script src="{% static 'vendor/bpmn-js/dist/bpmn-viewer.development.js' %}"></script>
