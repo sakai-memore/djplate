@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'hello.apps.HelloConfig',
     'sandbox.apps.SandboxConfig',
+    'sand.apps.SandConfig',
     'home.apps.HomeConfig',
     'bpmn.apps.BpmnConfig',
     'list_bpmn.apps.ListBpmnConfig',

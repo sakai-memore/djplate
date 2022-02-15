@@ -1,0 +1,35 @@
+{% extends "layouts/_layout.hbs" %}
+
+{% block _footer %}
+{% include "partials/_footer.hbs" %}
+{% endblock _footer %}
+
+{% block _navi %}
+{% include "partials/_navi.hbs" %}
+{% endblock _navi %}
+
+{% block _sidemenu %}
+{% include "partials/_sidemenu.hbs" %}
+{% endblock _sidemenu %}
+
+{# hbs #}
+{% block body %}
+{% include "sand/interaction/interaction.hbs" %}
+<script>
+{% include "sand/interaction/interaction.js" %}
+</script>
+{% endblock body %}
+
+{# js #}
+{% block script %}
+<script src="https://unpkg.com/bpmn-js@8.9.1/dist/bpmn-navigated-viewer.development.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.2/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsonform/2.2.5/jsonform.js"></script>
+{% endblock script %}
+
+{# css #}
+{% block css %}
+{% include "sand/interaction/interaction.css" %}
+{% endblock css %}
+
+

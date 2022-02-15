@@ -1,5 +1,7 @@
 {% extends "layouts/_layout.hbs" %}
 
+{% load static %}
+
 {% block _footer %}
 {% include "partials/_footer.hbs" %}
 {% endblock _footer %}
@@ -14,39 +16,22 @@
 
 {# hbs #}
 {% block body %}
-    <div class="alert alert-primary">
-      {{json}}
-    </div>
-    <div class="row">
-      <div class="col-sm">
-        <button class="btn btn-primary" id="btn_displayKeyMap">push</button>
-      </div>
-    </div>
-    <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#modal-widget-dialog">
-      Launch modal
-    </button>
-    <hr>
-    <h1>Getting started with JSON Form</h1>
-    <form></form>
-    <div id="res" class="alert"></div>
-    <!-- <script type="text/javascript" src="deps/opt/jsv.js"></script> -->
-
 {% include "sandbox/sandbox.hbs" %}
-
-
 {% endblock body %}
 
 {# js #}
 {% block script %}
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.2/underscore-min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonform/2.2.5/jsonform.js"></script>
+<!-- <script src="{% static 'js/forms/questionFormOfTask.js' %}"></script> -->
 
 <script>
+{% include "sandbox/components/questionFormOfTask.js" %}
 {% include "sandbox/sandbox.js" %}
-
 </script>
 {% endblock script %}
 
@@ -54,6 +39,9 @@
 {% block css %}
 <!-- Optional theme -->
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"> -->
-{% endblock css %}
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-wysiwyg@2.0.1/css/style.css"> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css" integrity="sha512-KuSX+43gVS5MEIJD2ewtrFPOHqC1PJnL8o2f5ciggPC0JUZ8XV0QXlfArO1mSzKkVFdRjsBDfrTU96C5SuRfqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
+{% include "sandbox/sandbox.css" %}
+{% endblock css %}
 

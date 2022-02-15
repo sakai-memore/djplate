@@ -7,7 +7,15 @@
         <a href="{% url 'list_bpmn' %}" class="list-group-item list-group-item-action bg-light"><i class="bi bi-pencil-square"> </i>bpm list</a>
         <a href="{% url 'modeler' pk=99999 %}" class="list-group-item list-group-item-action bg-light"><i class="bi bi-card-list"> </i>bpm modeler</a>
         {# <!-- <a href="{% url 'users' %}" class="list-group-item list-group-item-action bg-light"><i class="bi bi-person"> </i>Users</a> --> #}
-        <a href="{% url 'appsettings' %}" class="list-group-item list-group-item-action bg-light"><i class="bi bi-gear"> </i>App Settings</a>
+        {# <!-- <a href="{% url 'appsettings' %}" class="list-group-item list-group-item-action bg-light"><i class="bi bi-gear"> </i>App Settings</a> --> #}
+        {% include "partials/_sidemenu_collapse.hbs" %}
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
+
+<style>
+{% include "partials/_sidemenu_collapse.css" %}
+</style>
+<script>
+{% include "partials/_sidemenu_collapse.js" %}
+</script>

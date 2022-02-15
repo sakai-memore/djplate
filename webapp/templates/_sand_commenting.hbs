@@ -1,0 +1,38 @@
+{% extends "layouts/_layout.hbs" %}
+
+{% load static %}
+
+{% block _footer %}
+{% include "partials/_footer.hbs" %}
+{% endblock _footer %}
+
+{% block _navi %}
+{% include "partials/_navi.hbs" %}
+{% endblock _navi %}
+
+{% block _sidemenu %}
+{% include "partials/_sidemenu.hbs" %}
+{% endblock _sidemenu %}
+
+{# hbs #}
+{% block body %}
+{% include "sand/commenting/commenting.hbs" %}
+{% endblock body %}
+
+{# js #}
+{% block script %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/bpmn-js@8.9.1/dist/bpmn-navigated-viewer.development.js"></script>
+<!-- <script src="{% static 'vendor/bpmn-js-embedded-comments.js' %}" type="module"></script> -->
+
+<script type="module">
+{% include "sand/commenting/commenting.js" %}
+</script>
+{% endblock script %}
+
+{# css #}
+{% block css %}
+{% include "sand/commenting/commenting.css" %}
+{% endblock css %}
+
+

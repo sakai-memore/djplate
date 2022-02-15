@@ -1,14 +1,24 @@
 {% extends "layouts/_layout_window.hbs" %}
 
+{% load static %}
+
 {% block _footer %}
 {% include "partials/_footer.hbs" %}
 {% endblock _footer %}
 
+{# body #}
 {% block body %}
 {% include "bpmn/viewer/viewer.hbs" %}
+{% endblock body %}
+
+{# javascript #}
+{% block script %}
+<script src="{% static 'vendor/bpmn-js/dist/bpmn-viewer.development.js' %}"></script>
 <script>
 {% include "bpmn/viewer/viewer.js" %}
 </script>
-{% endblock body %}
+{% endblock script %}
 
-
+{# css #}
+{% block css %}
+{% endblock css %}

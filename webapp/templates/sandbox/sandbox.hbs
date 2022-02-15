@@ -1,14 +1,60 @@
-<hr>
-<div class="modal fade" id="modal-widget-dialog" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="ModalLongTitle">Key bindings</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+<p>ID : <span  id="sessuuid">{{SESSUUID}}</span></p>
+<div class="alert alert-primary">
+  {{json}}
+</div>
+
+<div class="row">
+  <div class="col-sm">
+    <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#modal-widget-dialog">Launch modal</button>
+  </div>
+  <div class="modal fade" id="modal-widget-dialog" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <!-- modal header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLongTitle">Key bindings</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- modal body -->
+        <div class="modal-body">
+          {% include "sandbox/components/io-dialog keybindings-dialog.hbs" %}
+        </div>
+        <!-- modal body end -->
+        <!-- modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
-      {% include "sandbox/components/io-dialog keybindings-dialog.hbs" %}
     </div>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-sm">
+    <button id="displayForm" type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modal-form">Input form</button>
+  </div>
+  <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <!-- modal header -->
+        <div class="modal-header" style="background-color:#D7DBDD;">
+          <h5 class="modal-title" id="ModalLongTitle">Uncertainties Form</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- modal body -->
+        <div class="modal-body" style="background-color:#ECF0F1;">
+          <form id="form" class="form-vertical"></form>
+          <div id="res"></div>
+        </div>
+        <!-- modal body end -->
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+

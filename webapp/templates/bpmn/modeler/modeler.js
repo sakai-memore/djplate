@@ -2,9 +2,8 @@ function fetchDiagram(url) {
     return fetch(url).then(response => response.text());
 }
 
-async function run(){
+async function drawCanvas(url){
     // the diagram you are going to display
-    const url = "../../media/xml/" + "{{file_name}}";
     // const bpmnXML = url;
     const bpmnXML = await fetchDiagram(url);
   
@@ -28,7 +27,9 @@ async function run(){
     }
 }
 
-run();
+const url = "../../media/xml/" + "{{file_name}}";
+$(document).bind('load', drawCanvas(url));
+// run();
 
 {% include "bpmn/modeler/components/io-import-export.js" %}
 {% include "bpmn/modeler/components/io-zoom-controls.js" %}

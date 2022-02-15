@@ -21,10 +21,6 @@
   <link rel="icon" type="image/ico" href="{% static 'favicon.ico' %}">
   {# css #}
   {% block css %}{% endblock css %}
-  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  {# javascript #}
-  {% block script %}{% endblock script %}
 </head>
 
 <body>
@@ -49,6 +45,10 @@
   <!-- Bootstrap core JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="{% static 'js/polyfills.js' %}"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  {# javascript #}
+  {% block script %}{% endblock script %}
   
   <!-- Menu Toggle Script -->
   <script>

@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('hello/', include('hello.urls')),
     path('sandbox/', include('sandbox.urls')),
+    path('sand/', include('sand.urls')),
     path('home/', include('home.urls')),
     path('bpmn/', include('bpmn.urls')),
     path('list_bpmn/', include('list_bpmn.urls')),

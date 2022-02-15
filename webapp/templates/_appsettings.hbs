@@ -12,8 +12,18 @@
 {% include "partials/_sidemenu.hbs" %}
 {% endblock _sidemenu %}
 
+{# body #}
 {% block body %}
 {% include "appsettings/appsettings.hbs" %}
 {% endblock body %}
 
+{# javascript #}
+{% block script %}
+<script>
+{% include "appsettings/appsettings.js" %}
+</script>
+{% endblock script %}
 
+{# css #}
+{% block css %}
+{% endblock css %}

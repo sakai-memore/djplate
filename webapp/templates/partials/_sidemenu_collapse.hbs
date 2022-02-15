@@ -1,0 +1,37 @@
+<!-- Bootstrap NavBar -->
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+    <!-- Sidebar -->
+    <div id="sidebar-container" class="sidebar-expanded d-none d-md-block bg-light">
+        <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+        <!-- Bootstrap List Group -->
+        <ul class="list-group">
+            <!-- Separator with title -->
+            <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                <small>Events and Overlays</small>
+            </li>
+            <!-- /END Separator -->
+            <!-- Menu with submenu -->
+            <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed"><i class="bi bi-speedometer"></i> Overlays</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+            </a>
+            <!-- Submenu content -->
+            <div id='submenu1' class="collapse sidebar-submenu">
+                <a href="{% url 'sand_overlays' %}" class="list-group-item list-group-item-action bg-light text-dark">
+                    <span class="menu-collapsed">Simple overlays</span>
+                </a>
+                <a href="{% url 'sand_interaction' %}" class="list-group-item list-group-item-action bg-light text-dark">
+                    <span class="menu-collapsed">Event Interaction</span>
+                </a>
+                <a href="{% url 'sand_commenting' %}" class="list-group-item list-group-item-action bg-light text-dark">
+                    <span class="menu-collapsed">Commenting</span>
+                </a>
+            </div>
+            <!-- Separator with title -->
+            <!-- /END Separator -->
+        </ul><!-- List Group END-->
+    </div><!-- sidebar-container END -->
+</div><!-- body-row END -->
