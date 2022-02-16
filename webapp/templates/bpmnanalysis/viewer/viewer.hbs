@@ -1,0 +1,45 @@
+{% load static %}
+
+<!-- insert body content -->
+<!-- <template> -->
+    <div class="container-fluid">
+      <!-- my content -->
+      <div class="row bg-light">
+        <div class="col-2">
+          <p><h5>ID: {{id}}</h5></p>
+        </div>
+        <div class="col-sm">
+          <p><h5>File Name: <span style="color:blue">{{file_name}}</span></h5></p>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div id="js-canvas" style="height:80vh"></div>
+        <!-- <div id="js-canvas"></div> -->
+      </div>
+      <!-- my content -->
+    </div>
+<!-- </template> -->
+
+<div class="row">
+  <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <!-- modal header -->
+        <div class="modal-header" style="background-color:#D7DBDD;">
+          <h5 class="modal-title" id="ModalLongTitle">Uncertainties Form</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- modal body -->
+        <div class="modal-body" style="background-color:#ECF0F1;">
+          {% include "bpmnanalysis/viewer/components/form.hbs" %}
+          <!-- <form id="form" class="form-vertical"></form> -->
+          <div id="res"></div>
+        </div>
+        <!-- modal body end -->
+      
+      </div>
+    </div>
+  </div>
+</div>

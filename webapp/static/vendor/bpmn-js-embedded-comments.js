@@ -20,6 +20,7 @@ function _getCommentsElement(element, create) {
 
   return comments;
 }
+
 function getComments(element) {
   var doc = _getCommentsElement(element);
 
@@ -31,6 +32,7 @@ function getComments(element) {
     });
   }
 }
+
 function setComments(element, comments) {
   var doc = _getCommentsElement(element, true);
 
@@ -39,11 +41,13 @@ function setComments(element, comments) {
   }).join(';\n;');
   doc.text = str;
 }
+
 function addComment(element, author, str) {
   var comments = getComments(element);
   comments.push([author, str]);
   setComments(element, comments);
 }
+
 function removeComment(element, comment) {
   var comments = getComments(element);
   var idx = -1;
@@ -166,8 +170,9 @@ function Comments(eventBus, overlays, bpmnjs) {
     });
   };
 }
+
 Comments.$inject = ['eventBus', 'overlays', 'bpmnjs'];
-Comments.OVERLAY_HTML = '<div class="comments-overlay">' + '<div class="toggle">' + '<span class="icon-comment"></span>' + '<span class="comment-count" data-comment-count></span>' + '</div>' + '<div class="content">' + '<div class="comments"></div>' + '<div class="edit">' + '<textarea tabindex="1" placeholder="Add a comment"></textarea>' + '</div>' + '</div>' + '</div>';
+Comments.OVERLAY_HTML = '<div class="comments-overlay">' + '<div class="toggle">' + '<span class="icon-comment"></span>' + '<span class="comment-count" data-comment-count></span>' + '</div>' + '<div class="content">' + '<div class="comments"></div>' + '<div class="edit">' + '<textarea tabindex="1" placeholder="Add an answer"></textarea>' + '</div>' + '</div>' + '</div>';
 Comments.COMMENT_HTML = '<div class="comment">' + '<div data-text></div><a href class="delete icon-delete" data-delete></a>' + '</div>'; // helpers ///////////////
 
 function defer(fn) {

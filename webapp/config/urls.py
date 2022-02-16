@@ -29,6 +29,7 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('bpmn/', include('bpmn.urls')),
     path('list_bpmn/', include('list_bpmn.urls')),
+    path('bpmnanalysis/', include('bpmnanalysis.urls')),
     path('appsettings/', include('appsettings.urls')),
     path('api/', include('api.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
