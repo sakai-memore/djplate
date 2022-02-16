@@ -1,6 +1,6 @@
 {% load static %}
 
-import EmbeddedComments from '{% static 'vendor/bpmn-js-embedded-comments.js' %}';
+// import EmbeddedComments from '{% static 'vendor/bpmn-js-embedded-comments.js' %}';
 
 function fetchDiagram(url) {
     return fetch(url).then(response => response.text());
@@ -18,9 +18,9 @@ const drawCanvas = async (url) => {
       keyboard: {
           bindTo: window
       },
-      additionalModules: [
-        EmbeddedComments,
-      ],
+      // additionalModules: [
+      //   EmbeddedComments,
+      // ],
     });
     
     // import xml data
@@ -43,7 +43,7 @@ const drawCanvas = async (url) => {
     // process of overlaying
     setOverlays(canvas, overlays);
     
-    // file save handling
+    // comments serialization handling
     const $download = $('[data-download]');
     
     const serialize = async () => {
@@ -64,9 +64,9 @@ const drawCanvas = async (url) => {
     bpmnViewer.on('comments.updated', serialize);
     bpmnViewer.on('commandStack.changed', serialize);
     
-    bpmnViewer.on('canvas.click', function() {
-        bpmnViewer.get('comments').collapseAll();
-    });
+    // bpmnViewer.on('canvas.click', function() {
+    //     bpmnViewer.get('comments').collapseAll();
+    // });
     
     // element event
     eventBus.on('element.click', 10, (e) => {
@@ -83,20 +83,15 @@ const drawCanvas = async (url) => {
         "parentType": boParent.$type,
         "parentName": boParent.name,
       }
-      window.alert(JSON.stringify(context));
+      // window.alert(JSON.stringify(context));
       console.log(context);
     });
     
 }
 
-const setFormInputLabel = (overlays, id, formObj) => {
+const setFormInputLabel = (overlays, id) => {
     // generate div tag
     const divTemp = $('<div data-toggle="modal" data-target="#modal-form"><i class="bi bi-info-square"></i></div>');
-    // add event function
-    divTemp.on("click", function(){
-      // console.log('divLabel clicked')
-      $('#form').jsonForm(formObj);
-    })
     
     // add into overlays
     try{
@@ -114,7 +109,7 @@ const setFormInputLabel = (overlays, id, formObj) => {
 
 const setOverlays = (canvas, overlays) => {
     // add event function
-    setFormInputLabel(overlays, 'Activity_1duib41', formObj)
+    setFormInputLabel(overlays, 'Activity_1duib41')
 }
 
 const url = "../../media/xml/" + "{{file_name}}";
