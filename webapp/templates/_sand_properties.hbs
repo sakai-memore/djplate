@@ -1,0 +1,34 @@
+{% extends "layouts/_layout.hbs" %}
+
+{% load static %}
+
+{% block _footer %}
+{% include "partials/_footer.hbs" %}
+{% endblock _footer %}
+
+{% block _navi %}
+{% include "partials/_navi.hbs" %}
+{% endblock _navi %}
+
+{% block _sidemenu %}
+{% include "partials/_sidemenu.hbs" %}
+{% endblock _sidemenu %}
+
+{# hbs #}
+{% block body %}
+{% include "sand/properties/properties.hbs" %}
+<script src="{% static 'vendor/bpmn-js-properties-panel/bpmn-js-properties-panel.bundle.js' %}"></script>
+<script>
+{% include "sand/properties/properties.js" %}
+</script>
+{% endblock body %}
+
+{# js #}
+{% block script %}
+{% endblock script %}
+
+{# css #}
+{% block css %}
+{% include "sand/properties/properties.css" %}
+{% endblock css %}
+

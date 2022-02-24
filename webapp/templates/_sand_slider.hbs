@@ -1,0 +1,34 @@
+{% extends "layouts/_layout.hbs" %}
+
+{% load static %}
+
+{% block _footer %}
+{% include "partials/_footer.hbs" %}
+{% endblock _footer %}
+
+{% block _navi %}
+{% include "partials/_navi.hbs" %}
+{% endblock _navi %}
+
+{% block _sidemenu %}
+{% include "partials/_sidemenu.hbs" %}
+{% endblock _sidemenu %}
+
+{# hbs #}
+{% block body %}
+{% include "sand/slider/slider.hbs" %}
+<script>
+{% include "sand/slider/slider.js" %}
+</script>
+{% endblock body %}
+
+{# js #}
+{% block script %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slideReveal/1.1.2/jquery.slidereveal.min.js" integrity="sha512-lvyVkYVYViNQ5+AhhO/6FUr5/cA8s7G3BOy6VY3GsBpZeyX7eJoYLDSpy4RbszSzA1gqmROQmWNDNECah7Ds+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock script %}
+
+{# css #}
+{% block css %}
+{% include "sand/slider/slider.css" %}
+{% endblock css %}
+

@@ -1,0 +1,26 @@
+{% load static %}
+
+    <div class="container-fluid">
+      <!-- my content -->
+      <div class="row bg-light">
+        <div class="col-2">
+          <p><h5>ID: <span  id="id">{{id}}</span></h5></p>
+        </div>
+        <div class="col-sm">
+          <p><h5>File Name: <span style="color:blue">{{file_name}}</span></h5></p>
+        </div>
+        <div class="col-sm">
+          <p>Screen Name: <span id="screen_name">{{SCREEN_NAME}}</span></p>
+        </div>
+        <div class="col-sm">
+          <p>Session Id: <span id="session_id">{{SESSUUID}}</span></p>
+        </div>
+      </div>
+      <!-- my content -->
+      <div class="row">
+        <div id="template">
+        </div>        
+        {% include "sand/templating/components/template.hbs" %}
+      </div>
+    </div>
+
