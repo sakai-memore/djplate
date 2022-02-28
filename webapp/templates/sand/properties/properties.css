@@ -5,6 +5,8 @@
 <link rel="stylesheet" href="{% static 'vendor/bpmn-js-properties-panel/bpmn-js-properties-panel.css' %}">
 
 <style>
+/* styles.css */
+
 html, body, #js-canvas {
   height: 100%;
   padding: 0;

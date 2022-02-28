@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block _footer %}
+{% include "partials/_footer.css" %}
 {% include "partials/_footer.hbs" %}
 {% endblock _footer %}
 
@@ -17,7 +18,7 @@
 {# hbs #}
 {% block body %}
 {% include "sand/properties/properties.hbs" %}
-<script src="{% static 'vendor/bpmn-js-properties-panel/bpmn-js-properties-panel.bundle.js' %}"></script>
+<script src="{% static 'vendor/bpmn-js-properties-panel/dist/bpmn-js-properties-panel.bundle.js' %}"></script>
 <script>
 {% include "sand/properties/properties.js" %}
 </script>

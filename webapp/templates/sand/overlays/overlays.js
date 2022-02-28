@@ -90,7 +90,9 @@ const setOverlays = (canvas, overlays) => {
 
 // -------------------------------------------------------------
 // load external diagram file via AJAX and open it
-const url = "../../media/xml/" + "{{file_name}}";
+const file_name = $("#file_name").text();
+//console.log(file_name);
+const url = "../../media/xml/" + file_name;
 //const url = "../../media/xml/" + "qr-code.bpmn";
 
 $(document).bind('load', drawCanvas(url));

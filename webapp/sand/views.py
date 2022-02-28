@@ -93,37 +93,26 @@ class CPropertiesView(TemplateView):
     ## template 
     template_name = TEMPLATE
     ## context
-    def get_context_data(self, **kwargs):
-        file_name = "qr-code.bpmn"
+    def get_context_data(self, pk, **kwargs):
+        MODULE_NAME = 'BPMN Modeler with Properties Panel'
         context = super(CPropertiesView, self).get_context_data(**kwargs)
+        file_name = ''
+        if pk == 1:
+            file_name = "PDM_Pizz_order.bpmn"
+        elif pk == 2:
+            file_name = "PDM_Pizz_delivery.bpmn"
+        elif pk == 3:
+            file_name = "PDM_Pizz_cooking.bpmn"
+        else:
+            file_name = "sample.bpmn"
+        #
         dict_cxt = {
-            "title": "BPM Modeling and Analysis",
-            "APP_NAME": settings.APP_NAME,
+            "title": MODULE_NAME,
             "SCREEN_NAME": self.SCREEN_NAME,
+            "id": pk,
             "file_name": file_name,
         }
         context.update(dict_cxt)
         return context
 
 properties = CPropertiesView.as_view()
-
-### Template View
-class CSliderView(TemplateView):
-    TEMPLATE ='_sand_slider.hbs'
-    SCREEN_NAME = TEMPLATE[0:-4]
-    ## template 
-    template_name = TEMPLATE
-    ## context
-    def get_context_data(self, **kwargs):
-        file_name = "qr-code.bpmn"
-        context = super(CSliderView, self).get_context_data(**kwargs)
-        dict_cxt = {
-            "title": "BPM Modeling and Analysis",
-            "APP_NAME": settings.APP_NAME,
-            "SCREEN_NAME": self.SCREEN_NAME,
-            "file_name": file_name,
-        }
-        context.update(dict_cxt)
-        return context
-
-slider = CSliderView.as_view()
