@@ -17,10 +17,14 @@
 
 {# hbs #}
 {% block body %}
+<link rel="stylesheet" href="{% static 'bpmn-modeler-customed/assets/bpmn-js-properties-panel/diagram-js.css' %}">
+<link rel="stylesheet" href="{% static 'bpmn-modeler-customed/assets/bpmn-js-properties-panel/bpmn-font/css/bpmn-embedded.css' %}">
+<link rel="stylesheet" href="{% static 'bpmn-modeler-customed/assets/bpmn-js-properties-panel/bpmn-js-properties-panel.css' %}">
+<link rel="stylesheet" href="{% static 'bpmn-modeler-customed/src/styles.css' %}">
 {% include "sand/properties/properties.hbs" %}
-<script src="{% static 'vendor/bpmn-js-properties-panel/dist/bpmn-js-properties-panel.bundle.js' %}"></script>
+<script src="{% static 'bpmn-modeler-customed/dist/bpmn-modeler-customed.es.js' %}"></script>
+<script src="{% static 'bpmn-modeler-customed/src/properties.js' %}"></script>
 <script>
-{% include "sand/properties/properties.js" %}
 </script>
 {% endblock body %}
 
@@ -30,6 +34,5 @@
 
 {# css #}
 {% block css %}
-{% include "sand/properties/properties.css" %}
 {% endblock css %}
 
