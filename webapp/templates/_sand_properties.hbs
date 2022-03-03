@@ -17,13 +17,13 @@
 
 {# hbs #}
 {% block body %}
-<link rel="stylesheet" href="{% static 'bpmn-modeler-customed/assets/bpmn-js-properties-panel/diagram-js.css' %}">
-<link rel="stylesheet" href="{% static 'bpmn-modeler-customed/assets/bpmn-js-properties-panel/bpmn-font/css/bpmn-embedded.css' %}">
-<link rel="stylesheet" href="{% static 'bpmn-modeler-customed/assets/bpmn-js-properties-panel/bpmn-js-properties-panel.css' %}">
-<link rel="stylesheet" href="{% static 'bpmn-modeler-customed/src/styles.css' %}">
+<link rel="stylesheet" href="{% static 'bpmn-modeler-customed/dist/bpmn-js-properties-panel/diagram-js.css' %}">
+<link rel="stylesheet" href="{% static 'bpmn-modeler-customed/dist/bpmn-js-properties-panel/bpmn-font/css/bpmn-embedded.css' %}">
+<link rel="stylesheet" href="{% static 'bpmn-modeler-customed/dist/bpmn-js-properties-panel/bpmn-js-properties-panel.css' %}">
+<link rel="stylesheet" href="{% static 'bpmn-modeler-customed/dist/properties.css' %}">
 {% include "sand/properties/properties.hbs" %}
 <script src="{% static 'bpmn-modeler-customed/dist/bpmn-modeler-customed.es.js' %}"></script>
-<script src="{% static 'bpmn-modeler-customed/src/properties.js' %}"></script>
+<script src="{% static 'bpmn-modeler-customed/dist/properties.js' %}"></script>
 <script>
 </script>
 {% endblock body %}
