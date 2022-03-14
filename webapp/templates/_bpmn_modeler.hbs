@@ -1,5 +1,7 @@
 {% extends "layouts/_layout.hbs" %}
 
+{% load static %}
+
 {% block _footer %}
 {% include "partials/_footer.hbs" %}
 {% endblock _footer %}
@@ -14,20 +16,29 @@
 
 {# body #}
 {% block body %}
-{% include "bpmn/modeler/modeler.hbs" %}
+
+<div id="app"></div>
+<div id="STATIC_PATH" style="display: none"></div>
+
 {% endblock body %}
 
 
 {# javascript #}
 {% block script %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.25.0/axios.min.js" integrity="sha512-/Q6t3CASm04EliI1QyIDAA/nDo9R8FQ/BULoUFyN4n/BDdyIxeH7u++Z+eobdmr11gG5D/6nPFyDlnisDwhpYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-{% include "bpmn/modeler/modeler.js" %}
-</script>
+<script src="{% static 'modeler-customed/dist/modeler-customed.es.js' %}"></script>
 {% endblock script %}
 
 {# css #}
 {% block css %}
-{% include "bpmn/modeler/modeler.css" %}
+    <!-- bpmn-js-properties-panel -->
+    <link rel="stylesheet" href="{% static './viewer-customed/assets/bpmn-js-properties-panel/diagram-js.css' %}">
+    <link rel="stylesheet" href="{% static './viewer-customed/assets/bpmn-js-properties-panel/bpmn-font/css/bpmn-embedded.css' %}">
+    <link rel="stylesheet" href="{% static './viewer-customed/assets/bpmn-js-properties-panel/bpmn-js-properties-panel.css' %}">
+    <!-- bpmn-js -->
+    <link rel="stylesheet" href="{% static './viewer-customed/assets/bpmn-js/dist/assets/diagram-js.css' %}" />
+    <link rel="stylesheet" href="{% static './viewer-customed/assets/bpmn-js/dist/assets/bpmn-font/css/bpmn.css' %}" />
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="{% static 'modeler-customed/dist/style.css' %}" />
 {% endblock css %}
 

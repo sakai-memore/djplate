@@ -16,22 +16,29 @@
 
 {# body #}
 {% block body %}
-{% include "bpmnanalysis/viewer/viewer.hbs" %}
-<script type="module">
-{# {% include "bpmnanalysis/viewer/components/questionFormOfTask.js" %} #}
-{% include "bpmnanalysis/viewer/viewer.js" %}
-</script>
+
+<div id="app"></div>
+<div id="STATIC_PATH" style="display: none"></div>
+
 {% endblock body %}
+
 
 {# javascript #}
 {% block script %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://unpkg.com/bpmn-js@8.9.1/dist/bpmn-navigated-viewer.development.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.2/underscore-min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jsonform/2.2.5/jsonform.js"></script>
+<script src="{% static 'viewer-customed/dist/viewer-customed.es.js' %}"></script>
 {% endblock script %}
 
 {# css #}
 {% block css %}
-{% include "bpmnanalysis/viewer/viewer.css" %}
+    <!-- bpmn-js-properties-panel -->
+    <link rel="stylesheet" href="{% static './viewer-customed/assets/bpmn-js-properties-panel/diagram-js.css' %}">
+    <link rel="stylesheet" href="{% static './viewer-customed/assets/bpmn-js-properties-panel/bpmn-font/css/bpmn-embedded.css' %}">
+    <link rel="stylesheet" href="{% static './viewer-customed/assets/bpmn-js-properties-panel/bpmn-js-properties-panel.css' %}">
+    <!-- bpmn-js -->
+    <link rel="stylesheet" href="{% static './viewer-customed/assets/bpmn-js/dist/assets/diagram-js.css' %}" />
+    <link rel="stylesheet" href="{% static './viewer-customed/assets/bpmn-js/dist/assets/bpmn-font/css/bpmn.css' %}" />
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="{% static 'viewer-customed/dist/style.css' %}" />
 {% endblock css %}
+
