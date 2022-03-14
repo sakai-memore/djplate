@@ -91,4 +91,4 @@ Expecting `+ce.join(", ")+", got '"+(this.terminals_[C]||C)+"'":me="Parse error 
     <div id='io-editing-tools'></div>
     <div id='io-import-export'></div>
     <div id='io-zoom-controls'></div>
-`;let Rm={};const $D="999999999999999";Aye($D);const Nye="#app",Lye="#div-components",kye="#js-canvas",Mye="#properties-panel-parent",$ye="#row-main",Bye="#STATIC-PATH",jye="../../../static/modeler-customed/src";Rn(document).on("load",Rye($D))});
+`;let Rm={};const $D="999999999999999";Aye($D);const Nye="#app",Lye="#div-components",kye="#js-canvas",Mye="#properties-panel-parent",$ye="#row-main",Bye="#STATIC-PATH",jye="../../../static/modeler-customed/src/";Rn(document).on("load",Rye($D))});

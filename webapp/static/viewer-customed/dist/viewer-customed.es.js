@@ -26999,5 +26999,5 @@ const EL_APP = "#app";
 const EL_COMPONENTS = "#div-components";
 const EL_CANVAS = "#js-canvas";
 const EL_STATIC_PATH = "#STATIC-PATH";
-const STATIC_PATH_CUSTOMED = "../../../static/modeler-customed/src";
+const STATIC_PATH_CUSTOMED = "../../../static/viewer-customed/src/";
 $(document).on("load", renderHbs(sessuuid));

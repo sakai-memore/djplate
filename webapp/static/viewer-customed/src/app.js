@@ -146,6 +146,6 @@ const EL_DROP_AREA = "#row-main";
 
 // For Server Side Rendering
 const EL_STATIC_PATH = "#STATIC-PATH";
-const STATIC_PATH_CUSTOMED = "../../../static/modeler-customed/src";
+const STATIC_PATH_CUSTOMED = "../../../static/viewer-customed/src/";
 
 $(document).on('load', renderHbs(sessuuid));
